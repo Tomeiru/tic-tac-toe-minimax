@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class SquareState(Enum):
     EMPTY = 0
     PLAYER_1 = 1
@@ -42,9 +43,14 @@ class GameState(Enum):
             case _:
                 return "Game is in a unknown state"
 
+
 class IllegalMoveException(Exception):
     pass
 
-type Board = tuple[tuple[SquareState, SquareState, SquareState], tuple[SquareState, SquareState, SquareState], tuple[SquareState, SquareState, SquareState]]
-type Move = tuple[int, int]
 
+type Board = tuple[
+    tuple[SquareState, SquareState, SquareState],
+    tuple[SquareState, SquareState, SquareState],
+    tuple[SquareState, SquareState, SquareState],
+]
+type Move = tuple[int, int]
